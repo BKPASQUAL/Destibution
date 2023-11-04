@@ -10,7 +10,7 @@
 
 .selected-menu-item {
   font-weight: 700;
-  background-color: aliceblue;
+  background-color: #d3e7ff; 
 }
 
 .collapse-btn {
@@ -25,5 +25,10 @@
 .sidebar-link {
   text-decoration: none;
   color: #000;
+
+}
+
+.css-udx2ky {
+  background-color: #ffffff !important; 
 
 }

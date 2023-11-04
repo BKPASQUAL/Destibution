@@ -4,6 +4,7 @@ import Items from "./components/Items";
 import Navbars from "./components/common/Navbars";
 import Home from "./pages/Home";
 import AddItems from "./components/AddItems";
+import Suppliers from "./components/suppliers/Suppliers";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Route path="additem" element={<AddItems />} />
       <Route path="/home" element={<Home />}>
         <Route path="Items" element={<Items />} />
+        <Route path="suppliers" element={<Suppliers />} />
         {/* <Route path="home" element={<Home />} /> */}
       </Route>
     </Routes>

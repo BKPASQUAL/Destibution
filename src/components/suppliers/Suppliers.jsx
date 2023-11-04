@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import { InputPicker } from "rsuite";
 import { Input, InputGroup } from "rsuite";
 import SearchIcon from "@rsuite/icons/Search";
-import "../assets/scss/Items.css";
 import { Button, Table } from "rsuite";
 import { Modal } from "rsuite";
-import AddItems from "./AddItems";
+import AddItems from "../AddItems";
 
-function Items() {
+function Suppliers() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -180,135 +179,135 @@ function Items() {
   }));
 
   const { Column, HeaderCell, Cell } = Table;
-
   return (
     <div className="items-con-main">
-      <div className="items-con-main-header">
-        <h1>Items</h1>
-      </div>
-      <div className="items-con">
-        <div className="items-con-top">
-          <div style={{ display: "flex", width: "20%" }}>
-            <InputPicker
-              data={datas}
-              style={{ marginLeft: "20px", border: "0.5px solid #b8b8b8" }}
-              placeholder="Select category"
-            />
-          </div>
-          <div style={{ display: "flex", marginRight: "12.5%", width: "20%" }}>
-            <InputPicker
-              data={datas}
-              style={{ border: "0.5px solid #b8b8b8" }}
-              placeholder="Select category"
-            />
-          </div>
-          <div
+    <div className="items-con-main-header">
+      <h1>Suppliers</h1>
+    </div>
+    <div className="items-con">
+      <div className="items-con-top">
+        <div style={{ display: "flex", width: "20%" }}>
+          <InputPicker
+            data={datas}
+            style={{ marginLeft: "20px", border: "0.5px solid #b8b8b8" }}
+            placeholder="Select category"
+          />
+        </div>
+        <div style={{ display: "flex", marginRight: "12.5%", width: "20%" }}>
+          <InputPicker
+            data={datas}
+            style={{ border: "0.5px solid #b8b8b8" }}
+            placeholder="Select category"
+          />
+        </div>
+        <div
+          style={{
+            display: "flex",
+            marginRight: "4%",
+            marginLeft: "4%",
+            width: "30%",
+          }}
+        >
+          <InputGroup
+            style={{ width: "100%", border: "0.5px solid #b8b8b8" }}
+          >
+            <Input />
+            <InputGroup.Button>
+              <SearchIcon />
+            </InputGroup.Button>
+          </InputGroup>
+        </div>
+        <div>
+          <Button
+            color="blue"
+            appearance="primary"
+            onClick={handleOpen}
+            style={{ width: "130%" }}
+          >
+            Add Item
+          </Button>
+          <Modal
+            open={open}
+            onClose={handleClose}
             style={{
-              display: "flex",
-              marginRight: "4%",
-              marginLeft: "4%",
-              width: "30%",
+              width: "auto",
+              backgroundColor: "transparent",
+              position: "fixed", // Fix the position
+              top: "10%", // Center vertically
+              left: "28%", // Center horizontally
             }}
           >
-            <InputGroup
-              style={{ width: "100%", border: "0.5px solid #b8b8b8" }}
-            >
-              <Input />
-              <InputGroup.Button>
-                <SearchIcon />
-              </InputGroup.Button>
-            </InputGroup>
-          </div>
-          <div>
-            <Button
-              color="blue"
-              appearance="primary"
-              onClick={handleOpen}
-              style={{ width: "130%" }}
-            >
-              Add Item
-            </Button>
-            <Modal
-              open={open}
-              onClose={handleClose}
-              style={{
-                width: "auto",
-                backgroundColor: "transparent",
-                position: "fixed", // Fix the position
-                top: "10%", // Center vertically
-                left: "28%", // Center horizontally
-              }}
-            >
-              <AddItems onClose={handleClose} />
-            </Modal>
-          </div>
+            <AddItems onClose={handleClose} />
+          </Modal>
         </div>
-        <div className="items-con-mid">
-          <Table
-            height={550}
-            data={data}
-            onRowClick={(rowData) => {
-              console.log(rowData);
-            }}
-          >
-            <Column width={100} align="center" fixed>
-              <HeaderCell>#</HeaderCell>
-              <Cell>{(rowData, rowIndex) => rowIndex + 1}</Cell>
-            </Column>
+      </div>
+      <div className="items-con-mid">
+        <Table
+          height={550}
+          data={data}
+          onRowClick={(rowData) => {
+            console.log(rowData);
+          }}
+        >
+          <Column width={100} align="center" fixed>
+            <HeaderCell>#</HeaderCell>
+            <Cell>{(rowData, rowIndex) => rowIndex + 1}</Cell>
+          </Column>
 
-            <Column width={100} align="center">
-              <HeaderCell className="items-con-mid-col">Id</HeaderCell>
-              <Cell dataKey="id" />
-            </Column>
+          <Column width={100} align="center">
+            <HeaderCell className="items-con-mid-col">Id</HeaderCell>
+            <Cell dataKey="id" />
+          </Column>
 
-            <Column width={200}>
-              <HeaderCell>First Name</HeaderCell>
-              <Cell dataKey="firstName" />
-            </Column>
+          <Column width={200}>
+            <HeaderCell>First Name</HeaderCell>
+            <Cell dataKey="firstName" />
+          </Column>
 
-            <Column width={150}>
-              <HeaderCell>Last Name</HeaderCell>
-              <Cell dataKey="lastName" />
-            </Column>
+          <Column width={150}>
+            <HeaderCell>Last Name</HeaderCell>
+            <Cell dataKey="lastName" />
+          </Column>
 
-            <Column width={240}>
-              <HeaderCell>Gender</HeaderCell>
-              <Cell dataKey="gender" />
-            </Column>
+          <Column width={240}>
+            <HeaderCell>Gender</HeaderCell>
+            <Cell dataKey="gender" />
+          </Column>
 
-            <Column width={150}>
-              <HeaderCell>Age</HeaderCell>
-              <Cell dataKey="age" />
-            </Column>
+          <Column width={150}>
+            <HeaderCell>Age</HeaderCell>
+            <Cell dataKey="age" />
+          </Column>
 
-            <Column width={150}>
-              <HeaderCell>Postcode</HeaderCell>
-              <Cell dataKey="postcode" />
-            </Column>
+          <Column width={150}>
+            <HeaderCell>Postcode</HeaderCell>
+            <Cell dataKey="postcode" />
+          </Column>
 
-            <Column width={300}>
-              <HeaderCell>Email</HeaderCell>
-              <Cell dataKey="email" />
-            </Column>
-            <Column width={80} fixed="right">
-              <HeaderCell>...</HeaderCell>
+          <Column width={300}>
+            <HeaderCell>Email</HeaderCell>
+            <Cell dataKey="email" />
+          </Column>
+          <Column width={80} fixed="right">
+            <HeaderCell>...</HeaderCell>
 
-              <Cell style={{ padding: "6px" }}>
-                {(rowData) => (
-                  <Button
-                    appearance="link"
-                    onClick={() => alert(`id:${rowData.id}`)}
-                  >
-                    Edit
-                  </Button>
-                )}
-              </Cell>
-            </Column>
-          </Table>
-        </div>
+            <Cell style={{ padding: "6px" }}>
+              {(rowData) => (
+                <Button
+                  appearance="link"
+                  onClick={() => alert(`id:${rowData.id}`)}
+                >
+                  Edit
+                </Button>
+              )}
+            </Cell>
+          </Column>
+        </Table>
       </div>
     </div>
-  );
+  </div>
+);
 }
 
-export default Items;
+
+export default Suppliers

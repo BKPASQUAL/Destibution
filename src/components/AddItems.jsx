@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Input } from "rsuite";
+import { Input ,Dropdown } from "rsuite";
 import "../assets/scss/Additem.css";
 
 function AddItems({ onClose }) {
@@ -46,31 +46,31 @@ function AddItems({ onClose }) {
               <Input />
             </div>
             <div className="addItems-inputs">
-              <label> Item Code</label>
+              <label>Cost Price(Pack)</label>
               <Input />
             </div>
             <div className="addItems-inputs">
-              <label> Item Code</label>
+              <label> Unit Price</label>
               <Input />
             </div>
           </div>
           <div className="addItems-main-container-mid-input">
             <div className="addItems-inputs">
-              <label> Item Code</label>
+              <label>Selling Price</label>
               <Input />
             </div>
             <div className="addItems-inputs">
-              <label> Item Code</label>
+              <label>Old Selling Price</label>
               <Input />
             </div>
             <div className="addItems-inputs">
-              <label> Item Code</label>
+              <label>Retail Price</label>
               <Input />
             </div>
           </div>
           <div className="addItems-main-container-mid-input">
             <div className="addItems-inputs-last">
-              <label> Item Code</label>
+              <label>Description</label>
               <Input />
             </div>
           </div>
