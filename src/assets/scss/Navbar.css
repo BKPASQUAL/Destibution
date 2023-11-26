@@ -68,5 +68,10 @@ element.style {
 
 }
 
-.--bs-dropdown-bg{
+/* .--bs-dropdown-bg{
 }
+
+.button, [type='button'], [type='reset'], [type='submit'] :hover {
+  background-color: transparent;
+  height: auto;
+} */

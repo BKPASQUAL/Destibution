@@ -1,8 +1,30 @@
 import React, { useState, useEffect } from "react";
-import { Input ,Dropdown } from "rsuite";
+import { Input ,InputPicker } from "rsuite";
 import "../assets/scss/Additem.css";
 
 function AddItems({ onClose }) {
+
+  const data = [
+    'Eugenia',
+    'Bryan',
+    'Linda',
+    'Nancy',
+    'Lloyd',
+    'Alice',
+    'Julia',
+    'Albert',
+    'Louisa',
+    'Lester',
+    'Lola',
+    'Lydia',
+    'Hal',
+    'Hannah',
+    'Harriet',
+    'Hattie',
+    'Hazel',
+    'Hilda'
+  ].map(item => ({ label: item, value: item }));
+
   useEffect(() => {
     const handleShourcut = (e) => {
       if (e.key === "F2") {
@@ -37,7 +59,7 @@ function AddItems({ onClose }) {
             </div>
             <div className="addItems-inputs">
               <label>Catagory</label>
-              <Input />
+              <InputPicker data={data} style={{ width: 224  }}  />
             </div>
           </div>
           <div className="addItems-main-container-mid-input">

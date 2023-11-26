@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import CogIcon from "@rsuite/icons/legacy/Cog";
 import { Link } from "react-router-dom";
 import "../../assets/scss/Navbar.css";
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import {
+  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem,
+} from "@material-tailwind/react";
 
 function Navbars() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -19,25 +22,28 @@ function Navbars() {
     <div>
       <Navbar className="navbar-con">
         <div className="navbar-con-title">
-          <Link to="/" className="navbar-con-title-link">Champika Hardware</Link>
+          <Link to="/" className="navbar-con-title-link">
+            Champika Hardware
+          </Link>
         </div>
         <div className="nav-flex"></div>
         <Nav className="navbar-con-items">
-          <NavDropdown
-            id="nav-dropdown-dark-example"
-            title="Dropdown"
-            menuVariant="dark"
+          <Menu>
+            <MenuHandler>
+              <button>Menu</button>
+            </MenuHandler>
+            <MenuList >
+             <div>sawad</div>
+            </MenuList>
+          </Menu>
+        </Nav>
+        <Nav className="navbar-con-items">
+          <Link
+            to="customerinvoice"
             className="nav-items"
-            show={dropdownOpen}
-            onMouseEnter={() => setDropdownOpen(true)}
-            onMouseLeave={() => setDropdownOpen(false)}
+            onClick={handleLinkClick}
           >
-            <Link to="Items" className="dropdown-item " onClick={handleLinkClick}>Action</Link>
-          </NavDropdown>
-        </Nav>
-        <Nav className="navbar-con-items">
-          <Link to="/" className="nav-items" onClick={handleLinkClick}>
-            Home
+            Invoice
           </Link>
         </Nav>
         <Nav className="navbar-con-items">
@@ -54,6 +60,7 @@ function Navbars() {
           <Link to="/" className="nav-items" onClick={handleLinkClick}>
             Home
           </Link>
+          
         </Nav>
       </Navbar>
     </div>

@@ -1,0 +1,74 @@
+.customerinvoive-main {
+    width: 100vw;
+    background-color: #EDF5FF; 
+
+}
+
+.customerinvoive-container {
+    margin: 20px;
+    margin: 50px;
+    margin-top: 10px;
+    background-color: #ffffff;
+    height: 75vh;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.customerinvoive-header {
+    background-color: #ffffff;
+    margin: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding-left: 20px;
+    height: 50px;
+}
+
+.customerinvoive-header h1 {
+    margin: 0;
+    font-size:35px;
+}
+
+.customerinvoive-container-top {
+    display: flex;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    /* background-color: blueviolet; */
+    justify-content: space-between;
+}
+
+.customerinvoive-container-top-left {
+    width: 250px;
+    height: auto;
+}
+
+.customerinvoive-container-top-right {
+    width: 250px;
+    height: auto;
+}
+
+.customerinvoive-container-mid {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.customerinvoive-input input{
+    height: 35px;
+    width: 100%;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 0.5px solid rgb(156, 155, 155);
+}
+
+.table>:not(caption)>*>*{
+    padding: 0 !important;
+}
+
+.customerinvoice-td-input {
+    width: 100%;
+    height: 30px;
+    border-style: none;
+    padding-left: 10px;
+}

@@ -1,0 +1,28 @@
+.header-contant {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+}
+
+.header-contant nav {
+    position: relative;
+}
+
+.header-contant nav ul {
+    position: absolute;
+    top: -27px;;
+    right: 0;
+    padding: 20px;
+    background-color: brown;
+    transition: all 400ms ease-in;
+}
+
+
+
+
